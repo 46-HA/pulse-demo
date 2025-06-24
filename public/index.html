@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Personal Card</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Your Personal Card</h1>
+    <a href="/auth/login" class="btn connect-btn">Connect Spotify</a>
+  </div>
+
+  <script>
+    const btn = document.querySelector('.connect-btn');
+    btn.addEventListener('mouseenter', () => {
+      btn.style.transform = 'scale(1.05) translateY(-3px)';
+      btn.style.boxShadow = '0 8px 15px rgba(29,185,84,0.6)';
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'scale(1) translateY(0)';
+      btn.style.boxShadow = 'none';
+    });
+
+    window.onload = () => {
+      document.querySelector('.container').style.opacity = '1';
+      document.querySelector('.container').style.transform = 'translateY(0)';
+    }
+  </script>
+</body>
+</html>
